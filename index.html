@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced HTML5 Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+    header, footer {
+      background: #004466;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    main {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    form {
+      display: grid;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background: #f0f0f0;
+    }
+    .media {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enhanced HTML5 Form Example</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Instructions</h2>
+      <ul>
+        <li>Please fill in all <strong>required fields</strong>.</li>
+        <li>Use proper formats (e.g., email, phone number).</li>
+        <li>Review your information before submitting.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Form Example</h2>
+      <form action="#" method="post" autocomplete="on">
+        <div>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+        </div>
+
+        <div>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+254700000000" pattern="^\+?[0-9]{10,15}$" required>
+        </div>
+
+        <div>
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="nonlinear">Non-Binary</option>
+            <option value="prefer_not">Prefer not to say</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Interests:</label><br>
+          <input type="checkbox" id="coding" name="interests" value="coding">
+          <label for="coding">Coding</label>
+          <input type="checkbox" id="sports" name="interests" value="sports">
+          <label for="sports">Sports</label>
+          <input type="checkbox" id="music" name="interests" value="music">
+          <label for="music">Music</label>
+        </div>
+
+        <div>
+          <label>Preferred Contact Method:</label><br>
+          <input type="radio" id="contact_email" name="contact_method" value="email" required>
+          <label for="contact_email">Email</label>
+          <input type="radio" id="contact_phone" name="contact_method" value="phone">
+          <label for="contact_phone">Phone</label>
+        </div>
+
+        <div>
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Write a short introduction..."></textarea>
+        </div>
+
+        <div>
+          <label for="readonlyid">Registration ID (readonly):</label>
+          <input type="text" id="readonlyid" name="readonly" value="USR-12345" readonly>
+        </div>
+
+        <div>
+          <label for="file">Upload Profile Picture:</label>
+          <input type="file" id="file" name="file" accept="image/*">
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Sample Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Example</th>
+            <th>Required?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Full Name</td>
+            <td>Jane Doe</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>jane@example.com</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>+254712345678</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="media">
+      <h2>Related Media</h2>
+      <figure>
+        <img src="https://via.placeholder.com/400x200" alt="Sample Image">
+        <figcaption>A placeholder image as sample media.</figcaption>
+      </figure>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <br><br>
+      <video width="400" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Example. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
